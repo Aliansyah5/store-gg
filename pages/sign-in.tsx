@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SignInForm from "../components/organism/SignInForm";
 
 export default function SignIn() {
@@ -10,14 +11,16 @@ export default function SignIn() {
             <form action="">
               <div className="container mx-auto">
                 <div className="pb-50">
-                  <a className="navbar-brand" href="../index.html">
-                    <Image
-                      src="/icon/logo.svg"
-                      height={60}
-                      width={60}
-                      alt="logo"
-                    />
-                  </a>
+                  <Link href="/">
+                    <a className="navbar-brand">
+                      <Image
+                        src="/icon/logo.svg"
+                        height={60}
+                        width={60}
+                        alt="logo"
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <SignInForm />
               </div>
